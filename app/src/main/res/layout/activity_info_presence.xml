@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoPresenceActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/lay_induk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding">
+
+                <TextView
+                    android:id="@+id/tv_nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nama"
+                    android:textSize="16sp"
+                    android:textColor="@color/black_color" />
+
+                <TextView
+                    android:id="@+id/tv_departemen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/departemen"
+                    android:textSize="16sp"
+                    android:textColor="@color/black_color" />
+
+                <TextView
+                    android:id="@+id/tv_jab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jabatan"
+                    android:textSize="16sp"
+                    android:textColor="@color/black_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-15dp"
+                android:layout_toRightOf="@+id/layout_1"
+                android:orientation="vertical"
+                android:padding="@dimen/padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_3"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-15dp"
+                android:layout_toRightOf="@+id/layout_2"
+                android:orientation="vertical"
+                android:padding="@dimen/padding"
+                android:textColor="@color/black_color">
+
+                <TextView
+                    android:id="@+id/tv_namauser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Saya"
+                    android:textSize="16sp"
+                    android:textColor="@color/black_color" />
+
+                <TextView
+                    android:id="@+id/tv_deptuser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Departemen"
+                    android:textSize="16sp"
+                    android:textColor="@color/black_color" />
+
+                <TextView
+                    android:id="@+id/tv_jabuser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Jabatan"
+                    android:textSize="16sp"
+                    android:textColor="@color/black_color" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_induk_spinmy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay_induk"
+            android:gravity="center_horizontal">
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spininf_bulan"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="5dp"
+                android:textSize="16sp"
+                app:ms_background_color="@color/bluepasta_color"
+                app:ms_dropdown_max_height="200dp"
+                app:ms_text_color="@color/black_color" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spininf_tahun"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="5dp"
+                android:textSize="16sp"
+                app:ms_background_color="@color/bluepasta_color"
+                app:ms_dropdown_max_height="200dp"
+                app:ms_text_color="@color/black_color" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnShowbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_induk_spinmy"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/padding"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edtcustom1"
+            android:text="Tampilkan"
+            android:textColor="@color/white_color" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChartInfo"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_below="@+id/btnShowbar"
+            android:layout_marginTop="@dimen/padding" />
+    </RelativeLayout>
+</ScrollView>

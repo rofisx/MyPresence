@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CheckInActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgppin"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/foto" />
+
+        <LinearLayout
+            android:id="@+id/detail1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgppin"
+            android:orientation="vertical"
+            android:layout_marginRight="-25dp"
+            android:padding="@dimen/padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/namaCIn"
+                android:textColor="@color/black_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/departemenCIn"
+                android:textColor="@color/black_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jabatanCIn"
+                android:textColor="@color/black_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/detail1"
+            android:orientation="vertical"
+            android:padding="@dimen/padding">
+
+            <TextView
+                android:id="@+id/tvNamauserIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama User"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/black_color" />
+
+            <TextView
+                android:id="@+id/tvDepart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Departemen"
+                android:textColor="@color/black_color" />
+
+            <TextView
+                android:id="@+id/tvJab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jabatan"
+                android:textColor="@color/black_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail2"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/checkinFace"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="@dimen/padding"
+                android:background="@drawable/ic_face" />
+
+            <Button
+                android:id="@+id/checkInAddr"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/padding"
+                android:background="@drawable/ic_location" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvFaceAuth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/padding"
+            android:text="Otentikasi Wajah "
+            android:textColor="@color/black_color" />
+        <ImageView
+            android:id="@+id/imgStatus"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_below="@+id/tvFaceAuth"
+            android:layout_marginTop="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@+id/msgFaceAuthIn"
+            android:src="@drawable/ic_check"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/msgFaceAuthIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvFaceAuth"
+            android:layout_centerHorizontal="true"
+            android:text="Status"
+            android:textStyle="italic"
+            android:textColor="@color/black_color"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/detail4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/msgFaceAuthIn"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAddrCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lokasi Check In :"
+                android:textColor="@color/black_color" />
+
+            <TextView
+                android:id="@+id/tvLokasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="@color/black_color" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvLat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail4"
+            android:layout_marginLeft="120dp"
+            android:text="Latitude" />
+
+        <TextView
+            android:id="@+id/tvLon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail4"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_toRightOf="@+id/tvLat"
+            android:text="Longitude" />
+
+        <fragment
+            android:id="@+id/fr_mapCheckIn"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/tvLat"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/tvKet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fr_mapCheckIn"
+            android:text="Keterangan :"
+            android:layout_marginTop="@dimen/padding"
+            android:textColor="@color/black_color" />
+
+        <EditText
+            android:id="@+id/edtKeterangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvKet" />
+
+        <Button
+            android:id="@+id/btnVCheckIn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/edtKeterangan"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/padding"
+            android:background="@drawable/btnrounded1"
+            android:text="Check In"
+            android:textColor="@color/white_color"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</ScrollView>

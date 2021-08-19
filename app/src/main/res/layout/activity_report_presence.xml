@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:context=".ReportPresenceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/lay_induk1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding">
+
+            <LinearLayout
+                android:id="@+id/lay_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_rptDep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/departemen"
+                    android:textColor="@color/black_color" />
+
+                <TextView
+                    android:id="@+id/tv_rptJab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding"
+                    android:text="@string/jabatan"
+                    android:textColor="@color/black_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_toRightOf="@+id/lay_1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textColor="@color/black_color" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding"
+                    android:text=":"
+                    android:textColor="@color/black_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_toRightOf="@+id/lay_2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_rpt_NamaDep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/departemen"
+                    android:textColor="@color/black_color"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/spin_rptDep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spin_rptJab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/lay_3"
+                android:layout_marginTop="@dimen/padding"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radiobtn_dep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semua Departemen" />
+
+                <RadioButton
+                    android:id="@+id/radiobtn_jab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Semua Jabatan" />
+
+                <Button
+                    android:id="@+id/reset_bg"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/ic_sync"
+                    android:backgroundTint="@color/black_color"></Button>
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:id="@+id/lay_spinperiode"
+                android:orientation="horizontal"
+                android:layout_below="@+id/rg_1">
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/spin_bulan"
+                    android:layout_width="140dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="50dp"
+                    app:ms_text_color="@color/black_color"
+                    app:ms_background_color="@color/bluepasta_color"
+                    android:textSize="16sp"
+                    app:ms_dropdown_max_height="200dp"/>
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/spin_tahun"
+                    android:layout_width="120dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="50dp"
+                    app:ms_text_color="@color/black_color"
+                    app:ms_background_color="@color/bluepasta_color"
+                    android:textSize="16sp"
+                    app:ms_dropdown_max_height="200dp"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnShowBarpt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edtcustom1"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/lay_spinperiode"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/padding"
+                android:text="Tampilkan"
+                android:textColor="@color/white_color" />
+
+        </RelativeLayout>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChartrpt"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_below="@+id/btnShowBarpt" />
+        <LinearLayout
+            android:id="@+id/lay_keteranganlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_listnama"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:text="Nama"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="@color/black_color"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/txt_datang"
+                    android:layout_width="65dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="8dp"
+                    android:text="Datang"
+                    android:textColor="@color/black_color"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/txt_datangt"
+                    android:layout_width="81dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:background="@color/yellowsoft_color"
+                    android:paddingHorizontal="8dp"
+                    android:text="Datang\nTerlambat"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_color"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/txt_pulang"
+                    android:layout_width="61dp"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="8dp"
+                    android:text="Pulang"
+                    android:textColor="@color/black_color"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/txt_pulangaw"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:background="@color/redsoft_color"
+                    android:paddingHorizontal="8dp"
+                    android:text="Pulang\nAwal"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black_color"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lay_induk_notelist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_ciodatang"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Datang"
+                android:textColor="@color/white_color"
+                android:background="#0000FE"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/txt_cildatang"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Datang\nTerlambat"
+                android:textColor="@color/black_color"
+                android:background="#FFFF00"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/txt_coodatang"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Pulang"
+                android:textColor="@color/black_color"
+                android:background="#00FF01"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/txt_cofdatang"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Pulang\nAwal"
+                android:textColor="@color/white_color"
+                android:background="#FE0000"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/lay_rel_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/lay_liv_cio"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+<!--                <ListView-->
+<!--                    android:id="@+id/list_emp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="150dp"-->
+<!--                    android:visibility="gone" />-->
+
+                <ListView
+                    android:id="@+id/list_emp_cio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lay_liv_cil"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:layout_toRightOf="@+id/lay_liv_cio">
+                <ListView
+                    android:id="@+id/list_emp_cil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay_liv_coo"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:layout_toRightOf="@+id/lay_liv_cil">
+                <ListView
+                    android:id="@+id/list_emp_coo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lay_liv_coe"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:layout_toRightOf="@+id/lay_liv_coo">
+                <ListView
+                    android:id="@+id/list_emp_coe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

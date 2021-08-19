@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditProfileActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgepp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/foto" />
+
+    <Button
+        android:id="@+id/btnchangephoto"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="-40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/ic_camera" />
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_trainfaces"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginBottom="@dimen/padding"-->
+<!--        android:background="@drawable/edtcustom1"-->
+<!--        android:paddingHorizontal="@dimen/padding"-->
+<!--        android:text="DAFTARKAN WAJAH"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:textColor="@color/white_color" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_trainfaces"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/padding">
+        <TextView
+            android:id="@+id/tv_epemail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone"
+            android:text="@string/email"/>
+        <Spinner
+            android:id="@+id/spinner_epemail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nama" />
+
+        <EditText
+            android:id="@+id/edt_epnama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nama_user"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tv_dept"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:text="Departemen"
+            android:visibility="gone"/>
+        <Spinner
+            android:id="@+id/spinner_epdept"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tv_epjab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jabatan"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"/>
+        <Spinner
+            android:id="@+id/spinner_epjab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_eppword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_eplogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding"
+            android:background="@drawable/edtcustom1"
+            android:text="Simpan"
+            android:textColor="@color/white_color" />
+
+    </LinearLayout>
+</LinearLayout>

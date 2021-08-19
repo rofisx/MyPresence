@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VLoginActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgvppfoto"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/foto" />
+
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:id="@+id/imgvppgallery"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:visibility="gone"-->
+<!--        android:src="@drawable/foto" />-->
+
+    <Button
+        android:id="@+id/btnchangephoto"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="-40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/ic_camera" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvname_vlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Saya"
+        android:layout_marginTop="@dimen/padding"
+        android:textAlignment="center"
+        android:textColor="@color/black_color"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/tvemail_vlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvname_vlogin"
+        android:text="Email"
+        android:textAlignment="center"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_trainfaces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/padding"
+        android:text="DAFTARKAN WAJAH"
+        android:textColor="@color/white_color"
+        android:background="@drawable/edtcustom1"
+        android:layout_marginTop="@dimen/padding"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/btn_trainfaces"
+        android:paddingHorizontal="@dimen/padding">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_vpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/btnsave_vlogin"
+            android:background="@drawable/edtcustom1"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_color"
+            android:text="Simpan"/>
+        <TextView
+            android:id="@+id/txt_imei"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>

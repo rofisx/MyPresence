@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding"
+    tools:context=".MainActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/mainPhoto"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/padding"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/foto" />
+
+    <TextView
+        android:id="@+id/mainName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/nama"
+        android:textColor="@color/black_color"
+        android:textSize="24sp" />
+    <View
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:background="@color/black_color"
+        android:layout_height="2dp"
+        android:layout_marginBottom="6dp"/>
+    <TextView
+        android:id="@+id/emailUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:text="@string/email"/>
+
+    <TextView
+        android:id="@+id/DepartName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Departemen"
+        android:textColor="@color/old_blue"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/JabName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding"
+        android:textColor="@color/black_color"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:text="Jabatan"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_bcheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/checkIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/edtcustom1"
+                android:inputType="textPersonName"
+                android:text="@string/check_in"
+                android:textColor="@color/white_color"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+            <Button
+                android:id="@+id/checkOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edtcustom2"
+                android:inputType="textPersonName"
+                android:text="@string/check_Out"
+                android:textColor="@color/white_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_bcheck"
+            android:layout_marginTop="@dimen/padding"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_rpt_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding"
+                android:background="@drawable/edtcustom3"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="@dimen/padding"
+                android:text="@string/info_ke_user"
+                android:textColor="@color/white_color" />
+
+            <Button
+                android:id="@+id/btn_rpt_karyawan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@string/info_ke_kar"
+                android:background="@drawable/edtcustom3"
+                android:textColor="@color/white_color"
+                android:paddingHorizontal="@dimen/padding"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

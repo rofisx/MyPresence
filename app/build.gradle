@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.0"
+
+    defaultConfig {
+        applicationId "com.example.mypresence"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.android.volley:volley:1.1.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'com.github.myinnos:AwesomeImagePicker:1.0.2'
+    implementation 'com.github.amanjeetsingh150:ImageZipper:1.3'
+    implementation "com.android.support:support-annotations:28.0.0"
+    androidTestImplementation'com.android.support.test:runner:0.5'
+    implementation project(':library')
+    implementation project(':dlib')
+
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.squareup.picasso:picasso:2.6.0-SNAPSHOT'
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+    implementation 'com.github.f0ris.sweetalert:library:1.6.2'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+    implementation 'com.jaredrummler:material-spinner:1.3.1'
+    implementation 'com.github.TutorialsAndroid:KAlertDialog:v4.0.19'
+
+
+
+}

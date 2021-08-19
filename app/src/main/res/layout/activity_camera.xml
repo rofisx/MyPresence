@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/old_blue"
+    android:orientation="vertical"
+    tools:context=".CameraInActivity">
+
+    <com.google.android.cameraview.CameraView
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:background="@color/blue_color" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="485dp"
+        android:paddingVertical="@dimen/padding"
+        android:rotation="90"
+        android:src="@drawable/face_strip" />
+
+
+    <ImageView
+        android:id="@+id/switch_camera"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"
+        android:rotation="90"
+        android:src="@drawable/ic_switch_camera" />
+
+    <FrameLayout
+        android:id="@+id/control"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingVertical="5dp">
+
+            <FrameLayout
+                android:id="@+id/fr_pict"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/btnrounded1"
+                android:backgroundTint="@color/white_color"
+                android:rotation="90">
+
+                <Button
+                    android:id="@+id/btn_tpict"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_camera"
+                    android:backgroundTint="@color/colorPrimary" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvKetFoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="7dp"
+                android:layout_marginTop="@dimen/padding"
+                android:gravity="center"
+                android:text="@string/textFoto"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#131201"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvKetFoto2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="7dp"
+                android:layout_marginTop="@dimen/padding"
+                android:gravity="center"
+                android:text="@string/textFoto"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#131201"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <FrameLayout
+                android:id="@+id/fr_sync"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginVertical="20dp"
+                android:background="@drawable/btnrounded1"
+                android:backgroundTint="@color/white_color"
+                android:rotation="90">
+
+                <Button
+                    android:id="@+id/btn_sync"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/ic_sync"
+                    android:backgroundTint="@color/colorPrimary" />
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

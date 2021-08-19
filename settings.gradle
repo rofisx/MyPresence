@@ -1,0 +1,4 @@
+include ':library'
+include ':dlib'
+include ':app'
+rootProject.name = "MyPresence"

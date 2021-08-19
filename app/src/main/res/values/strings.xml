@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Presence</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="ex_email">example@email.com</string>
+    <string name="nama">Nama</string>
+    <string name="nama_user">Nama</string>
+    <string name="jabatan">Jabatan</string>
+    <string name="departemen">Departemen</string>
+    <string name="no_telp">Nomer Ponsel Yang Aktif</string>
+    <string name="check_in">Check In</string>
+    <string name="check_Out">Check Out</string>
+    <string name="take_picture">Presence</string>
+    <string name="textFoto">Dekatkan Wajah Anda dan Posisikan \nLayar Hand Phone Secara Landscape \n dengan Tombol Sync \ndi Tangan Sebelah Kanan</string>
+    <string name="flash_off">Flash Mati</string>
+    <string name="flash_auto">Flash Otomatis</string>
+    <string name="flash_on">Flash On</string>
+    <string name="switch_camera">Switch Camera</string>
+    <string name="info_ke_user">Info Kehadiran Saya</string>
+    <string name="info_ke_kar">Laporan Kehadiran Karyawan</string>
+    <string name="action_edit">Edit Profile</string>
+    <string name="action_logout">Log Out</string>
+    <string name="sinc">Sync</string>
+    <string name="namaCIn">Nama\t\t\t\t\t\t\t:</string>
+    <string name="departemenCIn">Departemen\t:</string>
+    <string name="jabatanCIn">Jabatan \t\t\t\t:</string>
+    <string-array name="listdepartemen">
+        <item>HRD</item>
+        <item>Manager</item>
+        <item>IT Development</item>
+    </string-array>
+    <string-array name="bulan">
+        <item>Desember</item>
+        <item>November</item>
+        <item>Oktober</item>
+        <item>September</item>
+        <item>Agustus</item>
+        <item>Juli</item>
+        <item>Juni</item>
+        <item>Mei</item>
+        <item>April</item>
+        <item>Maret</item>
+        <item>Februari</item>
+        <item>Januari</item>
+    </string-array>
+    <string-array name="tahun">
+        <item>2025</item>
+        <item>2024</item>
+        <item>2023</item>
+        <item>2022</item>
+        <item>2021</item>
+        <item>2020</item>
+        <item>2019</item>
+        <item>2018</item>
+        <item>2017</item>
+    </string-array>
+</resources>
